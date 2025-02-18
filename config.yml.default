@@ -1,4 +1,4 @@
-token: "XXXXXXXXXXXXXXXXXXXXXXXX"         # Lichess OAuth2 Token.
+token: "lip_yGSo89MNKBqoFDi8SJby"         # Lichess OAuth2 Token.
 
 engines:
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -126,7 +126,7 @@ challenge:                                # Incoming challenges. (Commenting all
   concurrency: 1                          # Number of games to play simultaneously.
   bullet_with_increment_only: false       # Whether bullet games against BOTs should only be accepted with increment.
 # min_increment: 0                        # Minimum amount of increment to accept a challenge.
-# max_increment: 180                      # Maximum amount of increment to accept a challenge.
+  max_increment: 30                      # Maximum amount of increment to accept a challenge.
 # min_initial: 0                          # Minimum amount of initial time to accept a challenge.
 # max_initial: 315360000                  # Maximum amount of initial time to accept a challenge.
   variants:                               # Chess variants to accept (https://lichess.org/variant).
@@ -154,7 +154,7 @@ challenge:                                # Incoming challenges. (Commenting all
     - rated                               # Rated games
 
 matchmaking:
-  delay: 10                               # Time in seconds the bot must be idle before a new challenge is started.
+  delay: 30                               # Time in seconds the bot must be idle before a new challenge is started.
   timeout: 30                             # Time until a challenge is canceled.
   selection: weighted_random              # Matchmkaing type selection is "weighted_random" or "sequential".
   types:                                  # Matchmaking types of which one is selected before each game.
@@ -180,9 +180,9 @@ messages:
   #   {cpu} to insert CPU information
   #   {ram} to insert RAM size
   # Any other words in curly braces will be removed.
-  greeting: "Hey, I'm running {engine}. Good luck! Type !help for a list of commands." # Message sent to the opponent at the beginning of a game.
+  greeting: "Hey, I'm running on ChatGPT and Stockfish. Good luck! Type !help for a list of commands." # Message sent to the opponent at the beginning of a game.
   goodbye: "Good game, see you next time."                                             # Message sent to the opponent after the end of a game.
-  greeting_spectators: "Hey, I'm running {engine}. Type !help for a list of commands." # Message sent to the spectators at the beginning of a game.
+  greeting_spectators: "Hey, I'm running on ChatGPT and Stockfish. Type !help for a list of commands." # Message sent to the spectators at the beginning of a game.
   goodbye_spectators: "Thanks for watching."                                           # Message sent to the spectators after the end of a game.
 
 # whitelist:                              # List of users whose challenges are always accepted.
